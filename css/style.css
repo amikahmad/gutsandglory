@@ -1,0 +1,11 @@
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+figure {
+    width:100px;
+    height:30px;
+    border: 2px dotted green;
+}
