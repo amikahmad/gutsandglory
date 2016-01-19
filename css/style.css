@@ -20,7 +20,7 @@
         font-family: 'Avenir Next LT Pro Demi';
         font-style: normal;
         font-weight: bolder;
-        src: local('../fonts/AvenirNextLTPro-Demi'), url('../fonts/AvenirNextLTPro-Demi.woff') format('woff');
+        src: local('/fonts/AvenirNextLTPro-Demi'), url('/fonts/AvenirNextLTPro-Demi.woff') format('woff');
     }
     /* General CSS */
 
@@ -34,7 +34,8 @@
     h5,
     h6,
     p,
-    a {
+    a
+    figcaption {
         color: #505050;
         font-family: "Avenir Next LT Pro Regular", arial;
         letter-spacing: 1px;
@@ -102,22 +103,22 @@
         margin: 0;
     }
 
-    figure:nth-child(1) {
+   #topbar figure:nth-child(1) {
         background: gold;
         width: 25%;
     }
 
-    figure:nth-child(2) {
+   #topbar figure:nth-child(2) {
         background: deepskyblue;
         width: 17%;
     }
 
-    figure:nth-child(3) {
+   #topbar figure:nth-child(3) {
         background: yellowgreen;
         width: 36%;
     }
 
-    figure:nth-child(4) {
+   #topbar figure:nth-child(4) {
         background: deeppink;
         width: 22%;
     }
@@ -134,4 +135,8 @@
 img {
         width: 240px;
         height: 426.66666666px;
+    }
+
+    figcaption {
+
     }
