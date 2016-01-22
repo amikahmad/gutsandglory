@@ -271,7 +271,7 @@
 article#main {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: space-between;
 }
 
 figure {
