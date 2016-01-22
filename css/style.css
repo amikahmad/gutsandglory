@@ -273,3 +273,8 @@ article#main {
     flex-wrap: wrap;
     flex-direction: row;
 }
+
+figure {
+    width: 80%;
+    height: 80%;
+}
