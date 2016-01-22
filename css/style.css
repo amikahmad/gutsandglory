@@ -267,3 +267,9 @@
     #plus a:hover {
         color: #A0A0A0;
     }
+
+article#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
