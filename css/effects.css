@@ -1,0 +1,302 @@
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Geosans Light', sans-serif;
+}
+
+/* Effect 1: Brackets */
+.text-hover-1 a::before,
+.text-hover-1 a::after {
+    display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.text-hover-1 a::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.text-hover-1 a::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+.text-hover-1 a:hover::before,
+.text-hover-1 a:hover::after,
+.text-hover-1 a:focus::before,
+.text-hover-1 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
+}
+
+/* Effect 2: three circles */
+.text-hover-2 a {
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.text-hover-2 a::before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    color: transparent;
+    content: '•';
+    text-shadow: 0 0 transparent;
+    font-size: 1.2em;
+    -webkit-transition: text-shadow 0.3s, color 0.3s;
+    -moz-transition: text-shadow 0.3s, color 0.3s;
+    transition: text-shadow 0.3s, color 0.3s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.text-hover-2 a:hover::before,
+.text-hover-2 a:focus::before {
+    color: #fff;
+    text-shadow: 10px 0 #fff, -10px 0 #fff;
+}
+
+.text-hover-2 a:hover,
+.text-hover-2 a:focus {
+    color: #ba7700;
+}
+
+/* Effect 3: borders slight translate */
+.text-hover-3 a {
+    padding: 10px;
+    color: #237546;
+    font-weight: 700;
+    text-shadow: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.text-hover-3 a::before,
+.text-hover-3 a::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.text-hover-3 a::before {
+    top: 0;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.text-hover-3 a::after {
+    bottom: 0;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.text-hover-3 a:hover,
+.text-hover-3 a:focus {
+    color: #fff;
+}
+
+.text-hover-3 a:hover::before,
+.text-hover-3 a:focus::before,
+.text-hover-3 a:hover::after,
+.text-hover-3 a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* Effect 4: cross */
+.text-hover-4 {
+    position: relative;
+    z-index: 1;
+}
+
+.text-hover-4 a {
+    padding: 0 5px;
+    color: #b4770d;
+    font-weight: 700;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.text-hover-4 a::before,
+.text-hover-4 a::after {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    height: 2px;
+    margin-top: -1px;
+    background: #b4770d;
+    content: '';
+    z-index: -1;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+}
+
+.text-hover-4 a::before {
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    transform: translateY(-20px);
+}
+
+.text-hover-4 a::after {
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    transform: translateY(20px);
+}
+
+.text-hover-4 a:hover,
+.text-hover-4 a:focus {
+    color: #fff;
+}
+
+.text-hover-4 a:hover::before,
+.text-hover-4 a:hover::after,
+.text-hover-4 a:focus::before,
+.text-hover-4 a:focus::after {
+    opacity: 0.7;
+}
+
+.text-hover-4 a:hover::before,
+.text-hover-4 a:focus::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.text-hover-4 a:hover::after,
+.text-hover-4 a:focus::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* Effect 5: border switch */
+.text-hover-5 a {
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.text-hover-5 a::before,
+.text-hover-5 a::after {
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: #fff;
+    content: '';
+    opacity: 0.2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.text-hover-5 a::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+.text-hover-5 a::after {
+    right: 0;
+    bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+
+.text-hover-5 a:hover::before,
+.text-hover-5 a:hover::after,
+.text-hover-5 a:focus::before,
+.text-hover-5 a:focus::after {
+    opacity: 1;
+}
+
+.text-hover-5 a:hover::before,
+.text-hover-5 a:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.text-hover-5 a:hover::after,
+.text-hover-5 a:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+}
+
+/* Expand Icon */
+.si-icons span {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 40px 30px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.si-icons-hover span {
+    width: 128px;
+    height: 128px;
+    margin: 50px 40px;
+}
+
+.si-icons span {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 40px 30px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

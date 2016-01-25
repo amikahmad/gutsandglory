@@ -14,7 +14,6 @@
     <!--stylesheets-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.min.css">
     <!--js-->
 </head>
 
@@ -23,15 +22,38 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <header>This page is currently undergoing maintenance. Please check back on 1/25/2016 at 00:00 hours. Thank you.</header>
-    <nav></nav>
-    <section id="one">
-    <article></article>
-    <article></article>
-    </section>
-    <section id="two"></section>
-    <article></article>
-    <article></article>
+    <header data-0="height: 300px" data-128="height: 100px">
+        <article id="info" data-0="font-size: 10px; padding: 0 0 24px 16px;" data-128="font-size: 10px; padding: 0 0 24px 12px;">
+            <p>GUTS AND GLORY</p>
+            <p>EXPERIMENTAL UX AND UI DESIGNS</p>
+            <p id="copyright">CREATED AND MAINTAINED BY AMIK AHMAD</p>
+            <nav class="text-hover-1" id="text-hover-1">
+                <a href="#">GUTS</a>
+                <a href="#">GLORY</a>
+            </nav>
+        </article>
+    </header>
+    <main data-0="padding-top: 300px;" data-128="padding-top: 190px;">
+        <section id="one">
+            <article id="title">
+            <summary>
+            <h5>TITLE: GOOGLE SWING</h5>
+            <h5>OBJECTIVE: design an interface to present appropriate data and information in a manner that allows clear and efficient decision making.</h5>
+            <h5>TARGET: swing trader : \ˈswiŋ\ \ˈtrā-dər\  | a trader who uses technical analysis to look for stocks with short-term price momentum and attempts to capture a gain in a stock within one to four days.</h5>
+            </summary>
+            </article>
+            <article id="design">
+            </article>
+        </section>
+        <section id="two">
+            <article id="davinci">
+            </article>
+            <article id="thing1">
+            </article>
+            <article id="thing2">
+            </article>
+        </section>
+    </main>
     <footer></footer>
     <!--scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -40,7 +62,13 @@
         document.write(unescape('%3Cscript%20src%3D%22/js/jquery-2.2.0.min.js%22%3E%3C/script%3E'));
     }
     </script>
-    <script src="js/custom.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+    <script>
+    if (typeof jQuery === 'undefined') {
+        document.write(unescape('%3Cscript%20src%3D%22/js/skrollr.min.js%22%3E%3C/script%3E'));
+    }
+    </script>
+    <script src="js/index.js"></script>
     <!--google analytics-->
     <script>
     (function(i, s, o, g, r, a, m) {

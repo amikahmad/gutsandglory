@@ -10,22 +10,37 @@
     /*  Fonts  */
 
     @font-face {
-        font-family: 'Avenir Next LT Pro Regular';
-        font-style: normal;
+        font-family: 'Geosans Light;
+ font-style: normal;
         font-weight: normal;
-        src: local('../fonts/AvenirNextLTPro-Regular'), url('../fonts/AvenirNextLTPro-Regular.woff') format('woff');
+        src: local('../fonts/GeosansLight'), url('../fonts/GeosansLight.woff') format('woff');
     }
 
     @font-face {
-        font-family: 'Avenir Next LT Pro Demi';
-        font-style: normal;
+        font-family: 'Geosans Light Oblique;
+ font-style: normal;
         font-weight: bolder;
-        src: local('../fonts/AvenirNextLTPro-Demi'), url('../fonts/AvenirNextLTPro-Demi.woff') format('woff');
+        src: local('../fonts/GeosansLight'), url('../fonts/GeosansLight-Oblique.woff') format('woff');
     }
     /* General CSS */
 
+    *,
+    *:after,
+    *::before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
     body {
-        background-color: WhiteSmoke;
+        background-color: whitesmoke;
+        font-family: 'Geosans Light', sans-serif;
+    }
+
+    * {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     h2,
@@ -35,9 +50,8 @@
     h6,
     p,
     a {
-        color: #505050;
-        font-family: "Avenir Next LT Pro Regular", arial;
-        letter-spacing: 1px;
+        color: whitesmoke;
+        letter-spacing: 3px;
     }
 
     h1 {
@@ -73,44 +87,139 @@
         font-weight: bolder
     }
     /* HTML5 */
-
     /*  ----- Flex Wrapper ----- */
 
     #wrapper {
         display: flex;
+        flex-direction: column;
         min-width: 92.72727272727273%;
         margin: 0 auto;
-        flex-direction: row;
     }
-
     /* ----- Header ----- */
 
     header {
+        display: flex;
+        position: fixed;
         width: 100%;
-        height: 500px;
-        border: 2px dotted hotpink;
+        height: 300px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        background-color: #1f233e;
     }
 
-        /* ----- Navigation ----- */
+    #info {
+        display: flex;
+        width: 300px;
+        margin-top: 3%;
+        margin-left: 5%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 
-        nav {
-            width: 100px;
-            height: 100px;
-            border: 2px dotted skyblue;
-        }
+    #copyright {
+        width: 225px;
+        color: royalblue;
+    }
+    /* ----- Navigation ----- */
 
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    nav a {
+        display: flex;
+        margin: 15px 25px;
+        text-decoration: none;
+        font-weight: 200;
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+        font-size: 1em;
+    }
+
+    nav a:hover,
+    nav a:focus {
+        outline: none;
+    }
+    /* Hover Effect: Brackets */
+
+    .text-hover-1 a::before,
+    .text-hover-1 a::after {
+        display: inline-block;
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+        transition: transform 0.3s, opacity 0.2s;
+    }
+
+    .text-hover-1 a::before {
+        margin-right: 10px;
+        content: '[';
+        -webkit-transform: translateX(20px);
+        -moz-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+
+    .text-hover-1 a::after {
+        margin-left: 10px;
+        content: ']';
+        -webkit-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
+        transform: translateX(-20px);
+    }
+
+    .text-hover-1 a:hover::before,
+    .text-hover-1 a:hover::after,
+    .text-hover-1 a:focus::before,
+    .text-hover-1 a:focus::after {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        transform: translateX(0px);
+    }
     /* ----- Sections ----- */
 
-    #one {
-        flex-basis: 100%;
-        height: 300px;
-        border: 2px dotted blue;
+    main {
+        display: flex;
+        flex-direction: column;
     }
 
+    #one {
+        display: flex;
+        height: 1000px;
+    }
 
+    #title {
+        flex: 1;
+        min-height: 1000px;
+        background-color: indianred;
+    }
+
+    summary {
+        margin: 5% 5% 5% 5%;
+    }
+
+    #design {
+        flex: 1;
+        background-color: whitesmoke;
+    }
 
     #two {
-        flex-basis: 50%;
-        height: 300px;
-        border: 2px dotted green;
+        display: flex;
+        height: 1000px;
+    }
+
+    #davinci {
+        flex: 1;
+        background-color: royalblue;
+    }
+
+    #thing1 {
+        flex: 1;
+        background-color: whitesmoke;
+    }
+
+    #thing2 {
+        flex: 1;
+        background-color: indianred;
     }
