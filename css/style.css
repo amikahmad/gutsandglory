@@ -379,12 +379,12 @@
 
     #davinci {
         flex: 1;
-        background-color: royalblue;
+        background-color: whitesmoke;
     }
 
     #thing1 {
         flex: 1;
-        background-color: whitesmoke;
+        background-color: royalblue;
     }
 
     #thing2 {
