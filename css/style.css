@@ -328,6 +328,10 @@
         flex-direction: row;
         height: 500px;
     }
+    #one article {
+        display: flex;
+        align-items: flex-end;
+    }
 
     article#title {
         flex: 1;
@@ -341,12 +345,14 @@
 
     summary {
         display: flex;
+        max-width: 300px;
+        min-height: 200px;
         flex-direction: column;
         margin: 10% 5% 5% 5%;
+        align-items: flex-start;
     }
 
         summary p {
-        width: 300px;
         text-align: justify;
     }
 
@@ -356,7 +362,19 @@
 
     #two {
         display: flex;
-        height: 1000px;
+        height: 500px;
+    }
+
+    figure {
+        display: flex;
+        margin: 3% 3% 3% 3%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    img {
+        width: 40%;
+        height: 40%;
     }
 
     #davinci {
